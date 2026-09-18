@@ -1,0 +1,11 @@
+operator_key,operator_name,voice_inbound_mtr_tzs,voice_outbound_mtr_tzs,sms_mtr_tzs,standard_retail_rate_tzs
+TIGO_ON_NET,Tigo Tanzania (On-Net),0.0,0.0,5.0,30.0
+VODACOM,Vodacom Tanzania,15.6,15.6,5.0,45.0
+AIRTEL,Airtel Tanzania,15.6,15.6,5.0,45.0
+HALOTEL,Halotel (Viettel),15.6,15.6,5.0,45.0
+TTCL,TTCL Corporation,15.6,15.6,5.0,45.0
+INTL_KENYA,Safaricom Kenya,45.0,120.0,25.0,250.0
+INTL_UGANDA,MTN Uganda,45.0,120.0,25.0,250.0
+INTL_UK,Vodafone UK,65.0,350.0,25.0,600.0
+INTL_USA,AT&T USA,30.0,200.0,25.0,450.0
+FRAUD_PREMIUM,Global Satellite Gateway,15.0,1200.0,5.0,2500.0

@@ -1,0 +1,55 @@
+tower_id,tower_name,region,district,latitude,longitude,technology,voice_capacity_erlangs,data_backhaul_capacity_gbps,antenna_azimuth_deg,tower_height_m,operational_status
+TZ-DAR-001,Posta CBD Prime eNodeB,Dar es Salaam,Ilala,-6.8163,39.2889,5G,96,10.0,45,42,Operational
+TZ-DAR-002,Kariakoo Market Commercial Sector,Dar es Salaam,Ilala,-6.8228,39.2745,4G,120,2.5,120,38,Maintenance Degradation
+TZ-DAR-003,Oysterbay Diplomatic Hub,Dar es Salaam,Kinondoni,-6.775,39.27,5G,80,10.0,0,35,Operational
+TZ-DAR-004,Masaki Peninsula Marina Site,Dar es Salaam,Kinondoni,-6.7482,39.2785,5G,64,10.0,90,32,Operational
+TZ-DAR-005,Mwenge IT & University Corridor,Dar es Salaam,Kinondoni,-6.7725,39.2223,4G,96,2.5,180,40,Operational
+TZ-DAR-006,Sinza Commercial Hub,Dar es Salaam,Ubungo,-6.7865,39.223,4G,88,2.5,270,36,Operational
+TZ-DAR-007,Ubungo Magufuli Terminal Junction,Dar es Salaam,Ubungo,-6.7885,39.1982,4G,112,2.5,60,45,Operational
+TZ-DAR-008,Mbezi Beach Residential eNodeB,Dar es Salaam,Kinondoni,-6.7025,39.2081,4G,72,2.5,135,35,Operational
+TZ-DAR-009,Tegeta Commercial Center,Dar es Salaam,Kinondoni,-6.6712,39.1678,4G,64,2.5,210,38,Operational
+TZ-DAR-010,Temeke Industrial Port Gate,Dar es Salaam,Temeke,-6.852,39.274,4G,96,2.5,300,45,Maintenance Degradation
+TZ-DAR-011,Kigamboni Ferry & Deepwater Pier,Dar es Salaam,Kigamboni,-6.8285,39.3082,4G,64,2.5,45,36,Operational
+TZ-DAR-012,JNIA Airport Terminal 3 International,Dar es Salaam,Ilala,-6.8781,39.2026,5G,112,10.0,180,40,Operational
+TZ-DAR-013,Gerezani SGR Central Station,Dar es Salaam,Ilala,-6.8241,39.284,5G,96,10.0,90,35,Maintenance Degradation
+TZ-DAR-014,Kurasini TIPER Depot Industrial,Dar es Salaam,Temeke,-6.861,39.2885,3G,48,0.5,150,42,Operational
+TZ-DAR-015,Gongolamboto Transit Corridor,Dar es Salaam,Ilala,-6.897,39.155,3G,56,0.5,240,38,Operational
+TZ-PWA-001,Kibaha Maili Moja Industrial,Pwani,Kibaha,-6.7712,38.988,4G,64,2.5,60,45,Operational
+TZ-PWA-002,Bagamoyo Special Economic Zone,Pwani,Bagamoyo,-6.442,38.905,4G,56,2.5,90,40,Operational
+TZ-TAN-001,Tanga Port Marine Gantry,Tanga,Tanga City,-5.068,39.102,4G,64,2.5,45,42,Operational
+TZ-TAN-002,Chumbageni Tanga CBD,Tanga,Tanga City,-5.0745,39.091,3G,48,0.5,180,36,Operational
+TZ-TAN-003,Korogwe Junction Transit Hub,Tanga,Korogwe,-5.158,38.482,3G,40,0.5,270,45,Maintenance Degradation
+TZ-ARU-001,Arusha Clocktower Central CBD,Arusha,Arusha City,-3.3725,36.6944,5G,88,10.0,0,40,Operational
+TZ-ARU-002,Njiro Diplomatic Complex,Arusha,Arusha City,-3.402,36.711,4G,64,2.5,120,35,Operational
+TZ-ARU-003,Kisongo EAC Industrial Corridor,Arusha,Arumeru,-3.411,36.618,4G,56,2.5,210,42,Operational
+TZ-KIL-001,Moshi Town KNCU Central Site,Kilimanjaro,Moshi Urban,-3.3349,37.3404,4G,72,2.5,60,38,Operational
+TZ-KIL-002,Machame Kilimanjaro Foothills,Kilimanjaro,Hai,-3.225,37.24,3G,40,0.5,30,32,Operational
+TZ-KIL-003,Himo Kenya-Tanzania Border Hub,Kilimanjaro,Moshi Rural,-3.385,37.548,3G,48,0.5,90,45,Operational
+TZ-MWA-001,Mwanza Capri Point Lake Tower,Mwanza,Ilemela,-2.518,32.898,5G,88,10.0,315,42,Operational
+TZ-MWA-002,Nyegezi Bus & Lake Ferry Hub,Mwanza,Nyamagana,-2.571,32.915,4G,80,2.5,180,38,Operational
+TZ-MWA-003,Kirumba CCM Stadium Sector,Mwanza,Ilemela,-2.502,32.905,4G,72,2.5,45,36,Operational
+TZ-GEI-001,Geita Gold Mine Industrial Gateway,Geita,Geita Urban,-2.871,32.228,4G,64,2.5,90,45,Operational
+TZ-SHI-001,Shinyanga Diamond Trade Hub,Shinyanga,Shinyanga Urban,-3.6639,33.4211,3G,48,0.5,270,40,Operational
+TZ-BUK-001,Bukoba Lake Port Commercial,Kagera,Bukoba Urban,-1.3317,31.8122,3G,48,0.5,60,38,Operational
+TZ-MAR-001,Musoma Lake Victoria Pier,Mara,Musoma Urban,-1.503,33.805,3G,40,0.5,120,35,Operational
+TZ-TAR-001,Tarime Sirari Border Post,Mara,Tarime,-1.349,34.368,3G,48,0.5,45,42,Operational
+TZ-DOM-001,Dodoma National Parliament (Bunge),Dodoma,Dodoma Urban,-6.173,35.748,5G,96,10.0,0,40,Operational
+TZ-DOM-002,Mtumba Government City Sector A,Dodoma,Dodoma Urban,-6.115,35.912,5G,88,10.0,90,45,Operational
+TZ-DOM-003,Jamatini Dodoma CBD Central,Dodoma,Dodoma Urban,-6.182,35.742,4G,80,2.5,180,38,Operational
+TZ-SNG-001,Singida Crossroads Logistics Center,Singida,Singida Urban,-4.816,34.743,3G,48,0.5,270,40,Operational
+TZ-TAB-001,Tabora Railway Junction Hub,Tabora,Tabora Urban,-5.016,32.8,3G,48,0.5,135,42,Operational
+TZ-MBY-001,Mwanjelwa Market Mbeya Central,Mbeya,Mbeya City,-8.9094,33.4608,4G,80,2.5,45,40,Operational
+TZ-MBY-002,Uyole TAZARA & TANZAM Junction,Mbeya,Mbeya Rural,-8.932,33.535,4G,72,2.5,120,45,Operational
+TZ-IRI-001,Iringa Kihesa Highland Ridge,Iringa,Iringa Urban,-7.771,35.698,4G,64,2.5,0,38,Operational
+TZ-TND-001,Tunduma Zambia Border Clearance,Songwe,Momba,-9.302,32.768,3G,64,0.5,220,42,Operational
+TZ-NJO-001,Makambako Agro-Railway Interchange,Njombe,Makambako,-8.848,34.832,3G,48,0.5,180,38,Operational
+TZ-SON-001,Songea Commercial Gateway,Ruvuma,Songea Urban,-10.683,35.65,3G,40,0.5,90,35,Operational
+TZ-ZNZ-001,Stone Town Old Fort & Seafront,Zanzibar,Mjini,-6.162,39.188,5G,88,10.0,270,30,Operational
+TZ-ZNZ-002,Mwanakwerekwe Trade Corridor,Zanzibar,Magharibi,-6.175,39.228,4G,72,2.5,90,36,Operational
+TZ-ZNZ-003,Nungwi Tourism & Beach Resort Hub,Zanzibar,Kaskazini A,-5.725,39.298,4G,64,2.5,0,32,Operational
+TZ-ZNZ-004,Paje Kite Beach Resort Hub,Zanzibar,Kusini,-6.265,39.535,4G,56,2.5,60,28,Operational
+TZ-PEM-001,Chake Chake Clove Capital,Pemba,Kusini Pemba,-5.245,39.768,3G,40,0.5,180,35,Operational
+TZ-MOR-001,Morogoro Msamvu Transit Hub,Morogoro,Morogoro Urban,-6.812,37.662,4G,72,2.5,45,42,Operational
+TZ-MTW-001,Mtwara Deepwater Energy & Port Hub,Mtwara,Mtwara Urban,-10.274,40.182,4G,64,2.5,90,45,Operational
+TZ-KIG-001,Kigoma Port Lake Tanganyika Pier,Kigoma,Kigoma Urban,-4.876,29.626,3G,48,0.5,270,40,Operational
+TZ-KAH-001,Kahama Gold Corridor Commercial,Shinyanga,Kahama,-3.837,32.6,4G,64,2.5,0,38,Operational
