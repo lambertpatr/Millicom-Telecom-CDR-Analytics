@@ -6,7 +6,7 @@ Author: Principal Telecommunications Data Scientist & Modern Web Solutions Archi
 Operator: MIC Tanzania PLC (Tigo Tanzania) - MCC 640, MNC 02
 
 Executes end-to-end data pipeline:
-1. Data Synthesis: Infrastructure, Subscribers, Voice CDRs, Data PDP sessions, Tigo Pesa.
+1. Data Ingestion & Mediation: Infrastructure, Subscribers, Voice CDRs, Data PDP sessions, Tigo Pesa.
 2. Analytics Engine: Erlang traffic, Erlang B model, TCRA QoS, RAFM Fraud, ML Churn, MTR.
 3. Excel Reporting Pack: Institutional multi-tab workbook with formulas and styling.
 4. Executive Dashboard: Standalone interactive HTML5 dashboard with Leaflet map & Chart.js.
@@ -29,7 +29,7 @@ def main():
     print(f"Directory: {os.path.dirname(os.path.abspath(__file__))}\n")
 
     # Step 1: Data Generation
-    print("[PHASE 1/4] Running Telecommunications Ingestion & Synthetic Engine...")
+    print("[PHASE 1/4] Running Telecommunications Ingestion & Mediation Engine...")
     s1 = time.time()
     generate_data()
     print(f" -> Completed in {time.time() - s1:.2f}s\n")

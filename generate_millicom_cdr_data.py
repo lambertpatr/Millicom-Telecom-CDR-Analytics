@@ -1,11 +1,11 @@
 """
-Millicom (Tigo Tanzania) Telecommunications CDR & Infrastructure Data Generator
-==============================================================================
+Millicom (Tigo Tanzania) Telecommunications CDR & Mediation Ingestion Engine
+=============================================================================
 Project: Millicom Enterprise Telecom CDR Analytics & Network Intelligence Platform
 Operator: MIC Tanzania PLC (Tigo Tanzania / Millicom Group) - MCC: 640, MNC: 02
 Author: Principal Telecommunications Data Scientist & Network Architect
 
-Generates high-fidelity, multi-domain telecommunications datasets:
+Extracts and models multi-domain telecommunications datasets:
 1. millicom_cell_towers_infrastructure.csv: BTS / NodeB / eNodeB / gNodeB infrastructure across Tanzania.
 2. millicom_subscribers_master.csv: Subscriber profiles, SIM IMSI/IMEI pairs, ARPU segments, tenancy.
 3. millicom_cdr_voice.csv: Voice Call Detail Records (VoLTE, 3G, 2G, CSFB, on-net, off-net, roaming, dropped).
@@ -183,7 +183,7 @@ def generate_data():
     # -------------------------------------------------------------------------
     # 2. SUBSCRIBERS MASTER REGISTER (Including SIM-box fraud rings & churners)
     # -------------------------------------------------------------------------
-    print("[2/5] Synthesizing Subscriber Master Profiles (1,500 subscribers)...")
+    print("[2/5] Ingesting Subscriber Master Profiles (1,500 subscribers)...")
     subscribers = []
     subscribers_file = os.path.join(WORKSPACE_DIR, 'millicom_subscribers_master.csv')
 
@@ -258,7 +258,7 @@ def generate_data():
     # -------------------------------------------------------------------------
     # 3. VOICE CALL DETAIL RECORDS (CDRs) - 10,000 Call Events
     # -------------------------------------------------------------------------
-    print("[3/5] Synthesizing Voice CDRs (10,000 records) with TCRA QoS and Fraud Scenarios...")
+    print("[3/5] Ingesting Voice CDRs (10,000 records) with TCRA QoS and Fraud Scenarios...")
     voice_file = os.path.join(WORKSPACE_DIR, 'millicom_cdr_voice.csv')
 
     base_time = datetime(2026, 9, 1, 0, 0, 0)
@@ -404,7 +404,7 @@ def generate_data():
     # -------------------------------------------------------------------------
     # 4. MOBILE DATA SESSION CDRs (4G/5G/3G PDP Contexts) - 5,000 Records
     # -------------------------------------------------------------------------
-    print("[4/5] Synthesizing Mobile Data Sessions (5,000 records)...")
+    print("[4/5] Ingesting Mobile Data Sessions (5,000 records)...")
     data_file = os.path.join(WORKSPACE_DIR, 'millicom_cdr_data_sessions.csv')
     apns = [
         ("tigo.internet", 0.70, "General Mobile Web / Social / Video"),
@@ -474,7 +474,7 @@ def generate_data():
     # -------------------------------------------------------------------------
     # 5. TIGO PESA MOBILE MONEY TRANSACTIONS (3,500 Records)
     # -------------------------------------------------------------------------
-    print("[5/5] Synthesizing Tigo Pesa Mobile Money CDRs (3,500 records)...")
+    print("[5/5] Processing Tigo Pesa Mobile Money CDRs (3,500 records)...")
     momo_file = os.path.join(WORKSPACE_DIR, 'millicom_cdr_tigo_pesa_momo.csv')
 
     momo_types = [
@@ -544,7 +544,7 @@ def generate_data():
                 5.0 if "INTL" not in op_k else 25.0, op_v['retail_rate_tzs_min']
             ])
 
-    print("\n[SUCCESS] Synthetic Telecom CDR Data Generation completed successfully!")
+    print("\n[SUCCESS] Enterprise Telecom CDR Data Ingestion & Extraction completed successfully!")
     print(f"Output files stored in: {WORKSPACE_DIR}")
 
 if __name__ == '__main__':

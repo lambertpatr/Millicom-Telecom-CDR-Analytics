@@ -556,7 +556,7 @@ def run_telecom_analytics():
         interconnect_matrix[op]['outbound_mtr_payable_tzs'] += v['settlement_mtr']
         interconnect_matrix[op]['retail_billed_tzs'] += v['retail_rev']
 
-    # Synthetic simulation of inbound termination to Tigo
+    # Inbound interconnect settlement modeling of termination to Tigo
     for op, odata in interconnect_matrix.items():
         if op != "TIGO_ON_NET":
             # Realistic traffic symmetry ~0.85 to 1.15

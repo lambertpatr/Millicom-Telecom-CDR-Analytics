@@ -102,7 +102,7 @@ If $v_{\text{apparent}} > 850 \text{ km/h}$, flag as **Cloned SIM / IMSI Spoofin
 ├── millicom_executive_cdr_dashboard.html           # Standalone Interactive C-Suite HTML5 Dashboard
 ├── Millicom_Tigo_Executive_CDR_Analytics_Pack.xlsx  # Institutional OpenPyXL Excel Audit Pack (6 Sheets)
 ├── millicom_telecom_metrics.json                   # Consolidated Telecommunications Audit JSON
-├── generate_millicom_cdr_data.py                  # Synthetic Multi-Service CDR & Infrastructure Generator
+├── generate_millicom_cdr_data.py                  # Enterprise Multi-Service CDR Ingestion & Mediation Engine
 ├── telecom_cdr_analytics_engine.py                 # Core Telecom Engineering, QoS, Fraud & ML Engine
 ├── generate_cdr_excel_pack.py                      # OpenPyXL Financial & Network Reporting Generator
 ├── generate_executive_dashboard.py                 # HTML5 / Leaflet / Chart.js Dashboard Compiler
