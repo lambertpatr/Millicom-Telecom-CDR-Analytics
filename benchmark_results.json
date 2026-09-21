@@ -1,0 +1,86 @@
+{
+  "CSV (Plain)": {
+    "file_name": "clean_telecom_data.csv",
+    "size_kb": 406.1,
+    "compression_ratio": "1.00x (Baseline)",
+    "write_time_ms": 7.96,
+    "write_throughput_rows_sec": 314142,
+    "read_time_ms": 6.09,
+    "read_throughput_rows_sec": 410643,
+    "type_preservation": "Poor (All fields degrade to string)",
+    "nested_support": "None (Requires custom delimiters or JSON stringification)",
+    "best_use_case": "Ad-hoc human inspection, legacy spreadsheets, quick exports"
+  },
+  "CSV (Gzip Compressed)": {
+    "file_name": "clean_telecom_data.csv.gz",
+    "size_kb": 64.03,
+    "compression_ratio": "6.34x smaller",
+    "write_time_ms": 20.69,
+    "write_throughput_rows_sec": 120854,
+    "read_time_ms": 7.1,
+    "read_throughput_rows_sec": 351918,
+    "type_preservation": "Poor (Degrades to string)",
+    "nested_support": "None",
+    "best_use_case": "Archival storage of flat tables when Parquet is unsupported"
+  },
+  "JSON (Pretty Indented)": {
+    "file_name": "clean_telecom_data.json",
+    "size_kb": 1179.46,
+    "compression_ratio": "0.34x (Larger due to key repetitions & whitespace)",
+    "write_time_ms": 17.58,
+    "write_throughput_rows_sec": 142224,
+    "read_time_ms": 6.33,
+    "read_throughput_rows_sec": 394944,
+    "type_preservation": "Medium (Preserves numbers, booleans, arrays; lacks datetime)",
+    "nested_support": "Full (Hierarchical objects & arrays)",
+    "best_use_case": "Configuration files, human-readable API responses"
+  },
+  "JSON Lines (.jsonl)": {
+    "file_name": "clean_telecom_events.jsonl",
+    "size_kb": 1045.18,
+    "compression_ratio": "0.39x (Compact line-by-line)",
+    "write_time_ms": 8.04,
+    "write_throughput_rows_sec": 310956,
+    "read_time_ms": 6.51,
+    "read_throughput_rows_sec": 383967,
+    "type_preservation": "Medium (JSON primitives)",
+    "nested_support": "Full",
+    "best_use_case": "Streaming ingestion, Kafka producers, ELK stack, line-by-line chunking without loading full file into memory"
+  },
+  "SQLite / DuckDB": {
+    "file_name": "clean_telecom_data.db",
+    "size_kb": 540.0,
+    "compression_ratio": "0.75x (Includes B-Tree index pages)",
+    "write_time_ms": 6.93,
+    "write_throughput_rows_sec": 360596,
+    "read_time_ms": 1.59,
+    "read_throughput_rows_sec": 1574438,
+    "type_preservation": "High (Strict types, primary keys, relational integrity)",
+    "nested_support": "Via JSON1 extensions",
+    "best_use_case": "Local analytics, SQL filtering, indexed multi-user lookups, offline desktop applications"
+  },
+  "Apache Parquet (Snappy/ZSTD)": {
+    "file_name": "clean_telecom_data.parquet",
+    "size_kb": 89.34,
+    "compression_ratio": "4.55x smaller than CSV",
+    "write_time_ms": 5.17,
+    "write_throughput_rows_sec": 483559,
+    "read_time_ms": 1.1,
+    "read_throughput_rows_sec": 2272727,
+    "type_preservation": "Exceptional (Exact Arrow/Parquet schema, timestamp with tz, dictionary dtypes)",
+    "nested_support": "Full (Repetition & Definition levels)",
+    "best_use_case": "Enterprise Big Data, AWS Athena/S3, GCP BigQuery, Snowflake, Databricks, OLAP queries"
+  },
+  "Apache Arrow / Feather": {
+    "file_name": "clean_telecom_data.feather",
+    "size_kb": 182.75,
+    "compression_ratio": "2.22x smaller than CSV",
+    "write_time_ms": 2.79,
+    "write_throughput_rows_sec": 896057,
+    "read_time_ms": 0.49,
+    "read_throughput_rows_sec": 5102041,
+    "type_preservation": "Exceptional (Native Arrow memory representation)",
+    "nested_support": "Full",
+    "best_use_case": "Ultra-fast inter-process communication (IPC), passing dataframes between Python, R, and C++ with ZERO serialization overhead"
+  }
+}

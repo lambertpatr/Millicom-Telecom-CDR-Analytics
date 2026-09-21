@@ -1,0 +1,340 @@
+{
+  "execution_timestamp": "2026-09-21T08:33:52.382523+00:00",
+  "processing_time_seconds": 0.1109,
+  "metrics": {
+    "raw_total_rows": 2700,
+    "clean_total_rows": 2500,
+    "duplicates_dropped": 200,
+    "raw_missing_values_count": 2242,
+    "clean_missing_values_count": 0,
+    "phone_formatting_errors_fixed": 1643,
+    "timestamps_standardized": 2500,
+    "currency_symbols_stripped": 1786,
+    "typos_and_casing_harmonized": 1743,
+    "durations_standardized": 1157,
+    "data_quality_scores": {
+      "before": {
+        "completeness_pct": 93.08,
+        "validity_pct": 87.21,
+        "uniqueness_pct": 92.59,
+        "consistency_pct": 35.44,
+        "composite_quality_index": 77.1
+      },
+      "after": {
+        "completeness_pct": 100.0,
+        "validity_pct": 100.0,
+        "uniqueness_pct": 100.0,
+        "consistency_pct": 100.0,
+        "composite_quality_index": 100.0
+      }
+    }
+  },
+  "export_timings_ms": {
+    "csv_write_time_ms": 9.02,
+    "json_write_time_ms": 18.4,
+    "jsonl_write_time_ms": 8.59,
+    "sqlite_write_time_ms": 9.51
+  },
+  "sample_transformations": [
+    {
+      "raw": {
+        "record_id": "REC-101239",
+        "subscriber_msisdn": "tel:+255-714-020824",
+        "recipient_number": "0714-018-632",
+        "event_timestamp": "11/05/2023 02:54 PM",
+        "transaction_type": "BUNDLE_PURCHASE",
+        "amount_paid": "125,585.16",
+        "service_status": "Term",
+        "location_cell": "Mwanza",
+        "session_duration_sec": "120",
+        "network_layer": "LTE-A",
+        "user_agent_device": "Unknown",
+        "notes_field": "None"
+      },
+      "clean": {
+        "record_id": "REC-101239",
+        "subscriber_msisdn": "+255714020824",
+        "recipient_number": "+255714018632",
+        "event_timestamp_utc": "2023-11-05T14:54:00Z",
+        "transaction_type": "BUNDLE_PURCHASE",
+        "amount_tzs": 125585.16,
+        "service_status": "TERMINATED",
+        "location_region": "Mwanza",
+        "session_duration_sec": 120,
+        "network_layer": "4G_LTE",
+        "user_agent_device": "Unknown",
+        "notes_cleaned": "None"
+      }
+    },
+    {
+      "raw": {
+        "record_id": "REC-101897",
+        "subscriber_msisdn": "0714008768",
+        "recipient_number": "+255(0)714007946",
+        "event_timestamp": "2023-11-09 13:15:24",
+        "transaction_type": "VOICE_CALL",
+        "amount_paid": "$ 29.26 USD",
+        "service_status": "null",
+        "location_cell": "Zanzibar",
+        "session_duration_sec": "0",
+        "network_layer": "4G LTE",
+        "user_agent_device": "Huawei P40 Lite",
+        "notes_field": ""
+      },
+      "clean": {
+        "record_id": "REC-101897",
+        "subscriber_msisdn": "+255714008768",
+        "recipient_number": "INVALID_25507140",
+        "event_timestamp_utc": "2023-11-09T13:15:24Z",
+        "transaction_type": "VOICE_CALL",
+        "amount_tzs": 73150.0,
+        "service_status": "UNKNOWN",
+        "location_region": "Zanzibar",
+        "session_duration_sec": 0,
+        "network_layer": "4G_LTE",
+        "user_agent_device": "Huawei P40 Lite",
+        "notes_cleaned": ""
+      }
+    },
+    {
+      "raw": {
+        "record_id": "REC-100223",
+        "subscriber_msisdn": "  714017810  ",
+        "recipient_number": "0714-006-576",
+        "event_timestamp": "2023-11-16 03:04:29",
+        "transaction_type": "TIGO_PESA_CASH_OUT",
+        "amount_paid": "TZS 58,189.89/=",
+        "service_status": "  active  ",
+        "location_cell": "ZNZ",
+        "session_duration_sec": "-15",
+        "network_layer": "5G NR",
+        "user_agent_device": "Tecno Spark 10 Pro",
+        "notes_field": "Flagged for KYC update; verified by agent"
+      },
+      "clean": {
+        "record_id": "REC-100223",
+        "subscriber_msisdn": "+255714017810",
+        "recipient_number": "+255714006576",
+        "event_timestamp_utc": "2023-11-16T03:04:29Z",
+        "transaction_type": "TIGO_PESA_CASH_OUT",
+        "amount_tzs": 58189.89,
+        "service_status": "ACTIVE",
+        "location_region": "Zanzibar",
+        "session_duration_sec": 0,
+        "network_layer": "5G_NR",
+        "user_agent_device": "Tecno Spark 10 Pro",
+        "notes_cleaned": "Flagged for KYC update; verified by agent"
+      }
+    },
+    {
+      "raw": {
+        "record_id": "REC-100533",
+        "subscriber_msisdn": "tel:+255-714-002877",
+        "recipient_number": "+255/714/031921",
+        "event_timestamp": "2023-11-12 18:01:45",
+        "transaction_type": "VOICE_CALL",
+        "amount_paid": "TZS 80,993.31/=",
+        "service_status": "PENDING_KYC",
+        "location_cell": "Morogoro",
+        "session_duration_sec": "1800",
+        "network_layer": "3G WCDMA",
+        "user_agent_device": "Tecno Spark 10 Pro",
+        "notes_field": "VIP Subscriber, priority routing"
+      },
+      "clean": {
+        "record_id": "REC-100533",
+        "subscriber_msisdn": "+255714002877",
+        "recipient_number": "+255714031921",
+        "event_timestamp_utc": "2023-11-12T18:01:45Z",
+        "transaction_type": "VOICE_CALL",
+        "amount_tzs": 80993.31,
+        "service_status": "PENDING_KYC",
+        "location_region": "Morogoro",
+        "session_duration_sec": 1800,
+        "network_layer": "3G_WCDMA",
+        "user_agent_device": "Tecno Spark 10 Pro",
+        "notes_cleaned": "VIP Subscriber, priority routing"
+      }
+    },
+    {
+      "raw": {
+        "record_id": "REC-100692",
+        "subscriber_msisdn": "+255/714/016577",
+        "recipient_number": "+255 714 033 291",
+        "event_timestamp": "2023-11-30 11:00:37",
+        "transaction_type": "SMS_PACK",
+        "amount_paid": "TZS 108,949.45/=",
+        "service_status": "Term",
+        "location_cell": "Arusha\ufeff",
+        "session_duration_sec": "0",
+        "network_layer": "LTE-A",
+        "user_agent_device": "Tecno Spark 10 Pro",
+        "notes_field": "Customer stated: \"Cannot connect to 4G in Posta area, please help\""
+      },
+      "clean": {
+        "record_id": "REC-100692",
+        "subscriber_msisdn": "+255714016577",
+        "recipient_number": "+255714033291",
+        "event_timestamp_utc": "2023-11-30T11:00:37Z",
+        "transaction_type": "SMS_PACK",
+        "amount_tzs": 108949.45,
+        "service_status": "TERMINATED",
+        "location_region": "Arusha",
+        "session_duration_sec": 0,
+        "network_layer": "4G_LTE",
+        "user_agent_device": "Tecno Spark 10 Pro",
+        "notes_cleaned": "Customer stated: 'Cannot connect to 4G in Posta area, please help'"
+      }
+    },
+    {
+      "raw": {
+        "record_id": "REC-102027",
+        "subscriber_msisdn": "+255(0)714028085",
+        "recipient_number": "0714003151",
+        "event_timestamp": "Nov 19, 2023 11:29",
+        "transaction_type": "BUNDLE_PURCHASE",
+        "amount_paid": "TZS 64,565.31/=",
+        "service_status": "CHURNED",
+        "location_cell": "DAR ES SALAAM",
+        "session_duration_sec": "-15",
+        "network_layer": "LTE-A",
+        "user_agent_device": "Huawei P40 Lite",
+        "notes_field": "Flagged for KYC update; verified by agent"
+      },
+      "clean": {
+        "record_id": "REC-102027",
+        "subscriber_msisdn": "INVALID_25507140",
+        "recipient_number": "+255714003151",
+        "event_timestamp_utc": "2023-11-19T11:29:00Z",
+        "transaction_type": "BUNDLE_PURCHASE",
+        "amount_tzs": 64565.31,
+        "service_status": "CHURNED",
+        "location_region": "Dar es Salaam",
+        "session_duration_sec": 0,
+        "network_layer": "4G_LTE",
+        "user_agent_device": "Huawei P40 Lite",
+        "notes_cleaned": "Flagged for KYC update; verified by agent"
+      }
+    },
+    {
+      "raw": {
+        "record_id": "REC-101745",
+        "subscriber_msisdn": "+255/714/011782",
+        "recipient_number": "0714021920",
+        "event_timestamp": "2023/11/04",
+        "transaction_type": "VOICE_CALL",
+        "amount_paid": "58,926.82",
+        "service_status": "Term",
+        "location_cell": "Morogoro",
+        "session_duration_sec": "-15",
+        "network_layer": "unknown",
+        "user_agent_device": "Unknown",
+        "notes_field": "VIP Subscriber, priority routing"
+      },
+      "clean": {
+        "record_id": "REC-101745",
+        "subscriber_msisdn": "+255714011782",
+        "recipient_number": "+255714021920",
+        "event_timestamp_utc": "2023-11-04T00:00:00Z",
+        "transaction_type": "VOICE_CALL",
+        "amount_tzs": 58926.82,
+        "service_status": "TERMINATED",
+        "location_region": "Morogoro",
+        "session_duration_sec": 0,
+        "network_layer": "UNKNOWN",
+        "user_agent_device": "Unknown",
+        "notes_cleaned": "VIP Subscriber, priority routing"
+      }
+    },
+    {
+      "raw": {
+        "record_id": "REC-101459",
+        "subscriber_msisdn": "+255(0)714030688",
+        "recipient_number": "0000000000",
+        "event_timestamp": "01-12-2023 23:11:11",
+        "transaction_type": "DATA_RECHARGE",
+        "amount_paid": "$ 5.45 USD",
+        "service_status": "",
+        "location_cell": "Dodoma ",
+        "session_duration_sec": "360",
+        "network_layer": "4G",
+        "user_agent_device": "Transsion Infinix Hot 30",
+        "notes_field": "VIP Subscriber, priority routing"
+      },
+      "clean": {
+        "record_id": "REC-101459",
+        "subscriber_msisdn": "INVALID_25507140",
+        "recipient_number": "INVALID_00000000",
+        "event_timestamp_utc": "2023-12-01T23:11:11Z",
+        "transaction_type": "DATA_RECHARGE",
+        "amount_tzs": 13625.0,
+        "service_status": "UNKNOWN",
+        "location_region": "Dodoma",
+        "session_duration_sec": 360,
+        "network_layer": "4G_LTE",
+        "user_agent_device": "Transsion Infinix Hot 30",
+        "notes_cleaned": "VIP Subscriber, priority routing"
+      }
+    },
+    {
+      "raw": {
+        "record_id": "REC-102144",
+        "subscriber_msisdn": "tel:+255-714-009042",
+        "recipient_number": "0000000000",
+        "event_timestamp": "2023-11-12 03:07:27",
+        "transaction_type": "VOICE_CALL",
+        "amount_paid": "FREE",
+        "service_status": "",
+        "location_cell": "Zanzibar",
+        "session_duration_sec": "120",
+        "network_layer": "unknown",
+        "user_agent_device": "Unknown",
+        "notes_field": "VIP Subscriber, priority routing"
+      },
+      "clean": {
+        "record_id": "REC-102144",
+        "subscriber_msisdn": "+255714009042",
+        "recipient_number": "INVALID_00000000",
+        "event_timestamp_utc": "2023-11-12T03:07:27Z",
+        "transaction_type": "VOICE_CALL",
+        "amount_tzs": 0.0,
+        "service_status": "UNKNOWN",
+        "location_region": "Zanzibar",
+        "session_duration_sec": 120,
+        "network_layer": "UNKNOWN",
+        "user_agent_device": "Unknown",
+        "notes_cleaned": "VIP Subscriber, priority routing"
+      }
+    },
+    {
+      "raw": {
+        "record_id": "REC-101116",
+        "subscriber_msisdn": "0714006576",
+        "recipient_number": "+255/714/033976",
+        "event_timestamp": "2023-11-24 18:37:47",
+        "transaction_type": "SMS_PACK",
+        "amount_paid": "3,847.9800",
+        "service_status": "Terminated",
+        "location_cell": "Arusha",
+        "session_duration_sec": "360",
+        "network_layer": "3G WCDMA",
+        "user_agent_device": "Unknown",
+        "notes_field": "Flagged for KYC update; verified by agent"
+      },
+      "clean": {
+        "record_id": "REC-101116",
+        "subscriber_msisdn": "+255714006576",
+        "recipient_number": "+255714033976",
+        "event_timestamp_utc": "2023-11-24T18:37:47Z",
+        "transaction_type": "SMS_PACK",
+        "amount_tzs": 3847.98,
+        "service_status": "TERMINATED",
+        "location_region": "Arusha",
+        "session_duration_sec": 360,
+        "network_layer": "3G_WCDMA",
+        "user_agent_device": "Unknown",
+        "notes_cleaned": "Flagged for KYC update; verified by agent"
+      }
+    }
+  ]
+}

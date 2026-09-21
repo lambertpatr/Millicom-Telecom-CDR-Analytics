@@ -112,7 +112,39 @@ If $v_{\text{apparent}} > 850 \text{ km/h}$, flag as **Cloned SIM / IMSI Spoofin
 ├── millicom_cdr_voice.csv                          # 9,356 Voice CDRs (VoLTE, CS, Dropped, Route)
 ├── millicom_cdr_data_sessions.csv                  # 5,000 Data PDP Sessions (4G/5G, APN, Latency, Loss)
 ├── millicom_cdr_tigo_pesa_momo.csv                 # 3,500 Tigo Pesa Mobile Money Transactions
-└── millicom_interconnect_operator_rates.csv        # TCRA Regulated Interconnect MTR Clearing Matrix
+├── millicom_interconnect_operator_rates.csv        # TCRA Regulated Interconnect MTR Clearing Matrix
+│
+├── DATA_CLEANING_PORTFOLIO.md                      # Comprehensive Data Cleaning & Format Portfolio Case Study
+├── data_cleaning_portfolio_showcase.html           # Interactive Before-vs-After Data Quality & Benchmark UI
+├── run_data_cleaning_pipeline.py                   # Master Orchestrator for Messy Data Cleaning & Benchmarks
+├── generate_very_messy_data.py                     # Realistic High-Entropy Messy Data Synthesizer
+├── clean_messy_data_engine.py                      # High-Performance E.164, ISO-8601 & Quality Audit Engine
+├── pandas_bamboolib_cleaner.py                     # Vectorized Pandas .pipe() & Bamboolib Low-Code Recipes
+├── benchmark_file_formats.py                       # Benchmarks for CSV, JSON, JSONL, Parquet, Feather, SQLite
+├── raw_messy_telecom_data.csv                      # Synthesized Raw Messy CSV (Phone, Currencies, Typos)
+├── clean_telecom_data.csv                          # Clean Production CSV
+├── clean_telecom_data.json                         # Clean Production JSON Records
+├── clean_telecom_events.jsonl                      # Clean Production JSON-Lines (Streaming)
+└── clean_telecom_data.db                           # Clean SQLite Database with Typed B-Tree Indexes
+```
+
+---
+
+## Data Cleaning, Pandas, Bamboolib & Format Engineering Suite
+
+For senior data science and data engineering portfolios, this repository includes a dedicated module transforming **very messy, high-entropy telecommunications records** into validated production formats:
+
+- **E.164 Phone Normalization**: Parses 10+ dirty dialects (`+255 714...`, `0714-...`, `+255(0)...`, `tel:...`) to E.164.
+- **Resilient Datetime Parsing**: Unifies 7+ chaotic formats (ISO, US, UK, named months, Unix epochs) to ISO-8601 UTC.
+- **Financial Token Sanitization**: Strips currency prefixes (`TZS 15,000/=`, `$ 6.20 USD`, commas, negatives) into clean floats.
+- **Vectorized Pandas `.pipe()`**: Eliminates fragmentation using declarative method chaining and `category` dtypes.
+- **Bamboolib Low-Code Integration**: Demonstrates GUI-based exploratory cleaning and zero-lock-in Pandas code generation.
+- **File Format Speed Benchmarking**: Compares CSV, Gzip, JSON, JSONL, Parquet, Feather, and SQLite on storage, write speed, read speed, and schema fidelity.
+- **Interactive Before-vs-After Showcase**: Open `data_cleaning_portfolio_showcase.html` in any browser to inspect row-level diffs, interactive benchmark charts, and quality scorecards.
+
+To run the data cleaning suite:
+```bash
+python3 run_data_cleaning_pipeline.py
 ```
 
 ---
@@ -137,3 +169,4 @@ Simply double-click or open `millicom_executive_cdr_dashboard.html` in any web b
 Open `Millicom_Tigo_Executive_CDR_Analytics_Pack.xlsx` in Microsoft Excel:
 - Designed with corporate Millicom Blue (`#002B49`) and Tigo Gold styling.
 - Features dynamic Excel formulas (`SUM`, `AVERAGE`), conditional audit highlights, and TCRA SLA benchmarks.
+
