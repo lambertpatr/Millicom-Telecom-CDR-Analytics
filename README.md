@@ -189,3 +189,21 @@ python3 generate_financial_budget_model.py
 ```
 Outputs: `Corporate_Financial_Budgeting_and_Forecasting_Model.xlsx` (639 validated dynamic formulas, 0 formula errors).
 
+---
+
+## Greater Washington, D.C. Real Estate Scope Estimator Engine
+
+An executive-ready, protected, and fully automated **Master Estimator Workbook** designed for on-site field estimators evaluating residential property transitions across the Greater D.C. Metropolitan Area:
+
+- **Tab 1: Front-End Field Scope & Estimate Generator (UI)**: On-site property profile (Target ZIP Code, Square Footage, Asset Tier), 21-day cosmetic transition scope builder, live Speed Zone classification (Alpha/Beta/Gamma based on MDOM), and dynamic ROI multiples.
+- **Tab 2: Master SKU & Material Price Database**: Structured procurement catalog linking live Home Depot, Floor & Decor, and Amazon pricing tiers ($/SF, $/EA) via native `XLOOKUP` / `INDEX-MATCH` formulas.
+- **Tab 3: Parametric Rules & Regional Tier Multipliers**: 16 submarket ZIP codes across D.C., Northern Virginia, and Maryland with regional labor multipliers (1.00x–1.55x) and historical value-add multipliers.
+- **Bulletproof Protection**: Sheet-level locking with only 20 field input cells unlocked, strictly preventing formula breakage.
+- **Documentation**: Detailed architecture in [REAL_ESTATE_SCOPE_ESTIMATOR_PORTFOLIO.md](REAL_ESTATE_SCOPE_ESTIMATOR_PORTFOLIO.md).
+
+To regenerate the Master Estimator workbook:
+```bash
+python3 build_dc_real_estate_estimator.py
+```
+Outputs: `Greater_DC_Property_Transition_Master_Estimator.xlsx` (3 interconnected locked tabs).
+
