@@ -170,3 +170,22 @@ Open `Millicom_Tigo_Executive_CDR_Analytics_Pack.xlsx` in Microsoft Excel:
 - Designed with corporate Millicom Blue (`#002B49`) and Tigo Gold styling.
 - Features dynamic Excel formulas (`SUM`, `AVERAGE`), conditional audit highlights, and TCRA SLA benchmarks.
 
+---
+
+## Corporate Financial Planning & 12-Month Budgeting Model
+
+For FP&A, corporate finance, and executive advisory portfolios, this repository includes an institutional financial modeling suite:
+
+- **Executive Dashboard (First Page)**: C-Suite KPI cards (Revenue, Gross Margin %, EBITDA, Net Burn, Ending Liquidity), quarterly performance roll-up, and native embedded charts (`BarChart`, `LineChart`).
+- **Dynamic 12-Month Forecast**: Monthly P&L model cascading from driver-based revenue and cost assumptions with zero hardcoded math.
+- **Direct Cash Flow Forecast**: Working capital schedules modeling 30-day DSO customer collection lags and 30-day DPO vendor payment terms.
+- **Budget vs. Actuals (BvA) Framework**: 15 monitored operational lines with variance dollar/percentage calculations and automated conditional alert tags (`FAVORABLE` / `ON TRACK` / `UNFAVORABLE`).
+- **Messy Data Cleaned Pipeline**: Demonstrates an end-to-end automated ETL audit trail converting raw unstructured ERP extracts into a standardized accounting ledger.
+- **Documentation**: Detailed guide and architecture in [FINANCIAL_BUDGETING_PORTFOLIO.md](FINANCIAL_BUDGETING_PORTFOLIO.md).
+
+To regenerate the financial model workbook:
+```bash
+python3 generate_financial_budget_model.py
+```
+Outputs: `Corporate_Financial_Budgeting_and_Forecasting_Model.xlsx` (639 validated dynamic formulas, 0 formula errors).
+
