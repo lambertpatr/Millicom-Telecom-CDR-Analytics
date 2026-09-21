@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "timestamp": "2026-09-22T00:43:58.046427",
+    "target_rows": 1000000,
+    "parquet_size_mb": 35.39,
+    "duckdb_version": "1.5.5",
+    "pyarrow_version": "25.0.1"
+  },
+  "benchmarks": {
+    "group_by_aggregation": {
+      "description": "Multi-dimensional GroupBy across 1M rows with 5 aggregations",
+      "duckdb_parquet_time_ms": 52.97,
+      "duckdb_parquet_ram_mb": 0.01,
+      "duckdb_arrow_time_ms": 4532.31,
+      "duckdb_arrow_ram_mb": 8.61,
+      "speedup_vs_baseline": "85.6x direct streaming efficiency"
+    },
+    "column_projection": {
+      "description": "Selective 2-column read avoiding scanning other 8 columns",
+      "duckdb_time_ms": 14.0,
+      "duckdb_ram_mb": 0.0
+    },
+    "window_functions": {
+      "description": "Rolling 10-row moving average partitioned across 10 regions",
+      "duckdb_time_ms": 116.94,
+      "duckdb_ram_mb": 0.24
+    },
+    "out_of_core_streaming": {
+      "description": "Aggregation under artificial 32MB RAM cap (spilling/streaming)",
+      "duckdb_constrained_time_ms": 18.08,
+      "peak_ram_mb": 0.0,
+      "stability_status": "PASSED (Zero OOM errors)"
+    },
+    "native_duckdb_storage": {
+      "ingestion_time_ms": 1354.05,
+      "native_duckdb_size_mb": 25.76,
+      "subsequent_query_time_ms": 0.82
+    }
+  }
+}

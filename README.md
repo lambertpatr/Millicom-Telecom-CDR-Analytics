@@ -207,3 +207,22 @@ python3 build_dc_real_estate_estimator.py
 ```
 Outputs: `Greater_DC_Property_Transition_Master_Estimator.xlsx` (3 interconnected locked tabs).
 
+---
+
+## DuckDB Vectorized OLAP & Out-of-Core Performance Benchmark
+
+An empirical benchmark evaluating **DuckDB's vectorized columnar C++ engine** on **1,000,000 telecommunications records**:
+
+- **Direct Parquet Aggregation**: **52.97 ms** across 1M rows with only 0.01 MB Python RAM overhead.
+- **SIMD Columnar Pushdown**: **14.00 ms** to aggregate selective columns, skipping 80% of unneeded I/O.
+- **Vectorized Window Functions**: **116.94 ms** for multi-partition rolling moving averages.
+- **Out-of-Core Resilience**: Enforced an artificial **32 MB RAM limit** (`SET max_memory = '32MB'`) — executed in **18.08 ms** with zero out-of-memory errors.
+- **Native Columnar Storage**: Stored 1M rows in **25.76 MB** with subsequent queries resolving in **0.82 ms**.
+- **Documentation**: Detailed case study in [DUCKDB_OUT_OF_CORE_PORTFOLIO.md](DUCKDB_OUT_OF_CORE_PORTFOLIO.md).
+
+To run the benchmark:
+```bash
+python3 benchmark_duckdb_vs_pandas.py
+```
+Outputs: `duckdb_benchmark_results.json`
+
