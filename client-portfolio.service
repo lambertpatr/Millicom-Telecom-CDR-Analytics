@@ -6,10 +6,10 @@ After=network.target
 Type=simple
 User=lambert
 WorkingDirectory=/home/lambert/Desktop/fast-api/Data-Science/Millicom-Company
-Environment="PATH=/home/lambert/Desktop/fast-api/.venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin"
+Environment="PATH=/home/lambert/Desktop/fast-api/Data-Science/Millicom-Company/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin"
 Environment="PORT=8501"
 Environment="HOST=0.0.0.0"
-ExecStart=/home/lambert/Desktop/fast-api/.venv/bin/python -m streamlit run streamlit_app.py --server.port=8501 --server.address=0.0.0.0 --server.headless=true --browser.gatherUsageStats=false
+ExecStart=/home/lambert/Desktop/fast-api/Data-Science/Millicom-Company/venv/bin/python -m streamlit run streamlit_app.py --server.port=8501 --server.address=0.0.0.0 --server.headless=true --browser.gatherUsageStats=false
 
 Restart=always
 RestartSec=5
