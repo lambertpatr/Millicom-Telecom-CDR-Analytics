@@ -293,6 +293,43 @@ with col2:
     </div>
     """, unsafe_allow_html=True)
 
+st.markdown("""
+<div class="project-card" style="border-left: 5px solid #10B981; background: linear-gradient(180deg, #FFFFFF 0%, #F0FDF4 100%);">
+    <span class="card-badge badge-emerald">Healthcare & PBM Automation</span>
+    <h3 style="margin-top:0; color:#0F172A; font-size:1.25rem;">5. Quarterly Health Plan Formulary PDF-to-CSV/Excel Extraction Engine</h3>
+    <p style="color:#475569; font-size:0.9rem; line-height:1.5;">
+        Automated ingestion and tabular parsing of 50 to 200+ page health plan drug formularies. Replaces 3-5 days of manual data entry with 
+        a sub-minute Python pipeline that merges multi-line drug names, isolates coverage tiers (Tier 1–5), and separates Prior Authorization (PA), 
+        Quantity Limits (QL), and Step Therapy (ST) into clean relational columns.
+    </p>
+    <div class="metric-container">
+        <div class="metric-pill">
+            <div class="metric-pill-label">Processing Speed</div>
+            <div class="metric-pill-val">0.22s / Page</div>
+        </div>
+        <div class="metric-pill">
+            <div class="metric-pill-label">Accuracy Rate</div>
+            <div class="metric-pill-val">100.0% Validated</div>
+        </div>
+        <div class="metric-pill">
+            <div class="metric-pill-label">Restriction Flags</div>
+            <div class="metric-pill-val">PA, QL, ST Isolated</div>
+        </div>
+        <div class="metric-pill">
+            <div class="metric-pill-label">Export Formats</div>
+            <div class="metric-pill-val">CSV & Excel (.XLSX)</div>
+        </div>
+    </div>
+    <div style="margin-top:14px;">
+        <span class="tech-tag">pdfplumber</span>
+        <span class="tech-tag">Multi-Line Regex Stitching</span>
+        <span class="tech-tag">Formulary Tiers 1-5</span>
+        <span class="tech-tag">Pandas / OpenPyXL</span>
+        <span class="tech-tag">Automated Quality Audit</span>
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
 st.divider()
 
 # Deployment & Architecture Details
