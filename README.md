@@ -226,3 +226,17 @@ python3 benchmark_duckdb_vs_pandas.py
 ```
 Outputs: `duckdb_benchmark_results.json`
 
+---
+
+## Targeted Lead Scraping & Zero-Website Verification Pipeline
+
+A high-accuracy B2B lead generation and web research pipeline engineered to harvest and audit local service businesses that **have NO website whatsoever**:
+
+- **Target Capacity:** 1,500 – 2,000 verified leads delivered in 2–3 days ($0.03–$0.035/lead target pricing).
+- **3-Tier Verification Pipeline:**
+  1. *Directory Ingestion:* Scrapes Google Maps / Google Places API listings, immediately purging entries where a website exists.
+  2. *Deep SERP Cross-Verification:* Queries Google and Bing search indexes with `"{Business Name}" "{City}" "{State}"` and `"{Business Name}" "{Phone Number}"` to weed out hidden, broken, parked, or one-page websites.
+  3. *Social & Contact Enrichment:* Captures verified Facebook and Instagram links, phone numbers, and full normalized street addresses.
+- **Delivery Outputs:** Formatted Excel (`Sample_20_Verified_Leads_NO_Website.xlsx`) and CSV (`Sample_20_Verified_Leads_NO_Website.csv`).
+- **Interactive Web Showcase:** Run `streamlit run streamlit_app.py` and navigate to **Module 6: 🎯 Targeted Lead Scraping: Businesses With NO Website**.
+

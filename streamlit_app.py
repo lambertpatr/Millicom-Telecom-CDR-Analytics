@@ -330,6 +330,43 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
+st.markdown("""
+<div class="project-card" style="border-left: 5px solid #0284C7; background: linear-gradient(180deg, #FFFFFF 0%, #F0F9FF 100%); margin-top:20px;">
+    <span class="card-badge badge-blue">Lead Generation & Data Scraping</span>
+    <h3 style="margin-top:0; color:#0F172A; font-size:1.25rem;">6. Targeted Lead Scraping: Businesses With NO Website</h3>
+    <p style="color:#475569; font-size:0.9rem; line-height:1.5;">
+        High-precision B2B lead generation engine delivering 1,500–2,000 verified leads with <strong>100% zero-website guarantee</strong>. 
+        Features a 3-tier verification pipeline that scrapes Google Places/Maps directories, executes deep SERP cross-checks against Google/Bing 
+        to weed out unlinked or broken websites, captures active Facebook/Instagram profiles, and exports formatted Excel (.xlsx) workbooks.
+    </p>
+    <div class="metric-container">
+        <div class="metric-pill">
+            <div class="metric-pill-label">False-Positive Rate</div>
+            <div class="metric-pill-val">0.0% Website Guarantee</div>
+        </div>
+        <div class="metric-pill">
+            <div class="metric-pill-label">Verification Pipeline</div>
+            <div class="metric-pill-val">3-Tier Multi-Check</div>
+        </div>
+        <div class="metric-pill">
+            <div class="metric-pill-label">Lead Capacity</div>
+            <div class="metric-pill-val">2,000 Verified Leads</div>
+        </div>
+        <div class="metric-pill">
+            <div class="metric-pill-label">Export Delivery</div>
+            <div class="metric-pill-val">Excel (.XLSX) & CSV</div>
+        </div>
+    </div>
+    <div style="margin-top:14px;">
+        <span class="tech-tag">Google Places Scraper</span>
+        <span class="tech-tag">SERP Search Verification</span>
+        <span class="tech-tag">Phone & Address Deduplication</span>
+        <span class="tech-tag">Social URL Enrichment</span>
+        <span class="tech-tag">OpenPyXL Custom Styling</span>
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
 st.divider()
 
 # Deployment & Architecture Details
