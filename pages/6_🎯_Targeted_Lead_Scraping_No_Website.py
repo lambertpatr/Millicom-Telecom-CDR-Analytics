@@ -54,13 +54,13 @@ def load_sample_leads():
     if os.path.exists(SAMPLE_CSV_PATH):
         return pd.read_csv(SAMPLE_CSV_PATH)
     else:
-        # Fallback in-memory dataset
+        # Fallback in-memory dataset with privacy masking
         data = [
-            {"Business Name": "Mike's #1 Towing", "Category": "Towing Service", "Phone": "(832) 391-0221", "Address": "8724 Easthaven Blvd", "City": "Houston", "State": "TX", "ZIP Code": "77075", "Google Maps URL": "https://maps.google.com/?cid=1089271638219472183", "Facebook URL": "N/A", "Website Status": "VERIFIED NO WEBSITE"},
-            {"Business Name": "Southwest Towing Company", "Category": "Towing & Roadside", "Phone": "(832) 856-0404", "Address": "10532 S Post Oak Rd", "City": "Houston", "State": "TX", "ZIP Code": "77035", "Google Maps URL": "https://maps.google.com/?cid=2948172049182740192", "Facebook URL": "https://facebook.com/SouthwestTowingHouston", "Website Status": "VERIFIED NO WEBSITE"},
-            {"Business Name": "T.N.T. Auto Enterprises", "Category": "Auto Repair & Wrecker", "Phone": "(713) 433-1009", "Address": "14010 Quention Dr", "City": "Houston", "State": "TX", "ZIP Code": "77045", "Google Maps URL": "https://maps.google.com/?cid=4918273645192837461", "Facebook URL": "N/A", "Website Status": "VERIFIED NO WEBSITE"},
-            {"Business Name": "Expro Auto Towing", "Category": "Towing Service", "Phone": "(281) 598-9774", "Address": "940 Highway 6 South", "City": "Houston", "State": "TX", "ZIP Code": "77079", "Google Maps URL": "https://maps.google.com/?cid=5829104728193847261", "Facebook URL": "N/A", "Website Status": "VERIFIED NO WEBSITE"},
-            {"Business Name": "U S A Auto Sales Paint & Body", "Category": "Auto Body & Paint", "Phone": "(972) 247-4098", "Address": "12113 Garland Rd", "City": "Dallas", "State": "TX", "ZIP Code": "75218", "Google Maps URL": "https://maps.google.com/?cid=8392019482716354829", "Facebook URL": "N/A", "Website Status": "VERIFIED NO WEBSITE"}
+            {"Business Name": "Mike's #1 Towing", "Category": "Towing Service", "Phone": "(832) ***-0221", "Address": "8724 Easthaven Blvd", "City": "Houston", "State": "TX", "ZIP Code": "77075", "Google Maps URL": "https://maps.google.com/?cid=1089271638219472183", "Facebook URL": "N/A", "Website Status": "VERIFIED NO WEBSITE"},
+            {"Business Name": "Southwest Towing Company", "Category": "Towing & Roadside", "Phone": "(832) ***-0404", "Address": "10532 S Post Oak Rd", "City": "Houston", "State": "TX", "ZIP Code": "77035", "Google Maps URL": "https://maps.google.com/?cid=2948172049182740192", "Facebook URL": "https://facebook.com/SouthwestTowingHouston", "Website Status": "VERIFIED NO WEBSITE"},
+            {"Business Name": "T.N.T. Auto Enterprises", "Category": "Auto Repair & Wrecker", "Phone": "(713) ***-1009", "Address": "14010 Quention Dr", "City": "Houston", "State": "TX", "ZIP Code": "77045", "Google Maps URL": "https://maps.google.com/?cid=4918273645192837461", "Facebook URL": "N/A", "Website Status": "VERIFIED NO WEBSITE"},
+            {"Business Name": "Expro Auto Towing", "Category": "Towing Service", "Phone": "(281) ***-9774", "Address": "940 Highway 6 South", "City": "Houston", "State": "TX", "ZIP Code": "77079", "Google Maps URL": "https://maps.google.com/?cid=5829104728193847261", "Facebook URL": "N/A", "Website Status": "VERIFIED NO WEBSITE"},
+            {"Business Name": "U S A Auto Sales Paint & Body", "Category": "Auto Body & Paint", "Phone": "(972) ***-4098", "Address": "12113 Garland Rd", "City": "Dallas", "State": "TX", "ZIP Code": "75218", "Google Maps URL": "https://maps.google.com/?cid=8392019482716354829", "Facebook URL": "N/A", "Website Status": "VERIFIED NO WEBSITE"}
         ]
         return pd.DataFrame(data)
 
@@ -100,7 +100,7 @@ with tab_demo:
                 time.sleep(0.4)
                 st.write("ℹ️ **Tier 2 Result:** Only directory aggregator links found (Yelp, YellowPages, Clutch). No independent domain exists.")
                 time.sleep(0.3)
-                st.write("🔍 **Tier 3:** Cross-checking phone `(832) 391-0221` across WHOIS & DNS records... No domain registered.")
+                st.write("🔍 **Tier 3:** Cross-checking phone `(832) ***-0221` across WHOIS & DNS records... No domain registered.")
                 time.sleep(0.3)
                 status.update(label="AUDIT PASSED: Candidate Qualified (Zero Website Confirmed)", state="complete")
                 st.success("🎉 **QUALIFIED LEAD:** Retained in final delivery list.")

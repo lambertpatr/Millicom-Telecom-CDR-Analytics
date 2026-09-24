@@ -71,7 +71,7 @@ with tab_cleaner:
     
     with c_in1:
         st.subheader("Messy Raw Inputs")
-        test_phone = st.text_input("Messy Phone Number", value="tel:+255-714-020824 (Home)")
+        test_phone = st.text_input("Messy Phone Number", value="tel:+255-714-***-824 (Home)")
         test_date = st.text_input("Messy Timestamp", value="11/05/2023 02:54 PM")
         test_money = st.text_input("Messy Currency / Amount", value=" TZS 125,585.50 /= ")
         test_category = st.text_input("Erratic Categorical Value", value="   dar-es-salaam (cbd)  ")
