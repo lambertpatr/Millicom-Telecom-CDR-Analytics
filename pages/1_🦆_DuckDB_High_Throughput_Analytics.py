@@ -141,8 +141,8 @@ def load_source_dataframe():
         for i in range(2500):
             rows.append({
                 "record_id": f"REC-{100000+i}",
-                "subscriber_msisdn": f"+255714{random.randint(100000, 999999)}",
-                "recipient_number": f"+255714{random.randint(100000, 999999)}",
+                "subscriber_msisdn": f"+255714***{random.randint(100, 999)}",
+                "recipient_number": f"+255714***{random.randint(100, 999)}",
                 "event_timestamp_utc": (datetime(2026, 9, 1) + timedelta(minutes=i*10)).isoformat(),
                 "transaction_type": random.choice(types),
                 "amount_tzs": round(random.uniform(500, 150000), 2),
