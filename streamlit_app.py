@@ -367,6 +367,45 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
+st.markdown("""
+<div class="project-card" style="border-left: 5px solid #F59E0B; background: linear-gradient(180deg, #FFFFFF 0%, #FFFBEB 100%); margin-top:20px;">
+    <span class="card-badge badge-amber">Autonomous DBA & AI Optimization</span>
+    <h3 style="margin-top:0; color:#0F172A; font-size:1.25rem;">7. AI Autonomous Database Optimizer & Query Performance Engine</h3>
+    <p style="color:#475569; font-size:0.9rem; line-height:1.5;">
+        Autonomous database performance tuning platform combining live query catalog telemetry (<code>pg_stat_statements</code>) and 
+        <code>EXPLAIN (ANALYZE, BUFFERS)</code> plan tree traversal with an institutional <strong>Vector Knowledge RAG</strong> store. 
+        Automatically detects Sequential Scans, <code>work_mem</code> memory spills, and table bloat—synthesizing non-blocking DDL 
+        (<code>CREATE INDEX CONCURRENTLY</code>), HOT update <code>FILLFACTOR = 85</code> tuning, and autovacuum cost limit calibration.
+    </p>
+    <div class="metric-container">
+        <div class="metric-pill">
+            <div class="metric-pill-label">Latency Reduction</div>
+            <div class="metric-pill-val">96.5% - 99.7% Drop</div>
+        </div>
+        <div class="metric-pill">
+            <div class="metric-pill-label">Lock Safety</div>
+            <div class="metric-pill-val">Zero Exclusive Locks</div>
+        </div>
+        <div class="metric-pill">
+            <div class="metric-pill-label">Page Layout</div>
+            <div class="metric-pill-val">HOT Updates (Fillfactor 85)</div>
+        </div>
+        <div class="metric-pill">
+            <div class="metric-pill-label">Architecture</div>
+            <div class="metric-pill-val">Postgres, MSSQL & Oracle</div>
+        </div>
+    </div>
+    <div style="margin-top:14px;">
+        <span class="tech-tag">pg_stat_statements</span>
+        <span class="tech-tag">EXPLAIN BUFFERS Parser</span>
+        <span class="tech-tag">Vector Knowledge RAG</span>
+        <span class="tech-tag">FILLFACTOR / HOT Updates</span>
+        <span class="tech-tag">Autovacuum Tuning</span>
+        <span class="tech-tag">NVMe random_page_cost</span>
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
 st.divider()
 
 # Deployment & Architecture Details
